@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:re="http://purl.org/atompub/rank/1.0">
+    <title type="text">Recent Questions - Stack Overflow</title>
+    <link rel="self" href="https://stackoverflow.com/feeds" type="application/atom+xml" />
+    <link rel="alternate" href="https://stackoverflow.com/questions" type="text/html" />
+    <subtitle>most recent 30 from stackoverflow.com</subtitle>
+    <updated>2021-10-13T11:32:15Z</updated>
+    <id>https://stackoverflow.com/feeds</id>
+    <creativeCommons:license>https://creativecommons.org/licenses/by-sa/4.0/rdf</creativeCommons:license>
+    <entry>
+        <id>https://stackoverflow.com/q/69554732</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">When uninstalling an msi, also uninstall related products</title>
+        <category scheme="https://stackoverflow.com/tags" term="wix" />
+        <category scheme="https://stackoverflow.com/tags" term="windows-installer" />
+        <author>
+            <name>Alonzzo2</name>
+            <uri>https://stackoverflow.com/users/2561181</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554732/when-uninstalling-an-msi-also-uninstall-related-products" />
+        <published>2021-10-13T11:30:27Z</published>
+        <updated>2021-10-13T11:30:27Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have created and installed 2 different msi files, A and B, both with the same upgrade code but different product codes.&lt;br /&gt;&#xA;How can I remove msi A, when removing msi B?&lt;br /&gt;&#xA;I thought I could do it via RemoveExistingProducts, but it isn&#x27;t being run when removing.&lt;br /&gt;&#xA;So I thought I could trigger RemoveExistingProducts with a &#x27;removing&#x27; condition but from what I read this also can&#x27;t be done.&lt;br /&gt;&#xA;The only solution I think about is to create a custom action, in msi B, which will have a condition of &#x27;removing&#x27; and the custom action will search for related products and remove those (except itself).&lt;/p&gt;&#xA;&lt;p&gt;Isn&#x27;t there any other way to accomplish this?&#xA;Thanks&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554729</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Why ArrayList.add() method don&#x27;t accept an object reference as a prameter?</title>
+        <category scheme="https://stackoverflow.com/tags" term="java" />
+        <author>
+            <name>Ramzi Bouali</name>
+            <uri>https://stackoverflow.com/users/11525525</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554729/why-arraylist-add-method-dont-accept-an-object-reference-as-a-prameter" />
+        <published>2021-10-13T11:30:23Z</published>
+        <updated>2021-10-13T11:30:23Z</updated>
+        <summary type="html">
+            &lt;p&gt;I wrote a little program that use ArrayList collection :&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;import java.util.Scanner;&#xA;import java.util.ArrayList;&#xA;&#xA;class MyClass {&#xA;    String name ;&#xA;    String surname ;&#xA;    int age ;&#xA;    MyClass () {}&#xA;    MyClass (String name,String surname,int age){&#xA;        this.name = name;&#xA;        this.surname= surname;&#xA;        this.age=age;&#xA;    }&#xA;    void showAll () {&#xA;        System.out.println(&amp;quot;----------------------------------------------------------------------------------------&amp;quot;);&#xA;        System.out.println(&amp;quot;Name: &amp;quot;&#x2B;name&#x2B;&amp;quot;\n&amp;quot;&#x2B;&amp;quot;Surname: &amp;quot;&#x2B;surname&#x2B;&amp;quot;\n&amp;quot;&#x2B;&amp;quot;Age: &amp;quot;&#x2B;age);&#xA;    }&#xA;}&#xA;&#xA;public class Main {&#xA;    public static void main(String[] args) {&#xA;&#xA;        Scanner input = new Scanner(System.in);&#xA;        ArrayList&amp;lt;MyClass&amp;gt; arrayData = new ArrayList&amp;lt;&amp;gt;();&#xA;        MyClass obj= new MyClass();&#xA;        int index ;&#xA;&#xA;        for (int i=1;i&amp;lt;=5;i&#x2B;&#x2B;) {&#xA;            System.out.println(&amp;quot;-------------------------------------------------------------------------------------&amp;quot;);&#xA;            System.out.println(&amp;quot;Data of person No &amp;quot;&#x2B;i&#x2B;&amp;quot; : &amp;quot;);&#xA;            System.out.println(&amp;quot;Name: &amp;quot;);&#xA;            obj.name = input.nextLine();&#xA;            System.out.println(&amp;quot;Surname: &amp;quot;);&#xA;            obj.surname = input.nextLine();&#xA;            System.out.println(&amp;quot;Age: &amp;quot;);&#xA;            obj.age = input.nextInt();&#xA;            input.nextLine();&#xA;            arrayData.add(obj);&#xA;        }&#xA;        while(true) {&#xA;            System.out.println(&amp;quot;Put index: &amp;quot;);&#xA;            index = input.nextInt();&#xA;            input.nextLine();&#xA;            arrayData.get(index).showAll();&#xA;        }&#xA;&#xA;    }&#xA;}&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;But it doesn&#x27;t work as expected because &lt;code&gt;arrayData&lt;/code&gt; store only the last received object &lt;code&gt;obj&lt;/code&gt; in all its elements.It seems there is a problem in the line :&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;arrayData.add(obj);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;So i did some research on google and i found a way to fix the code by replacing the reference &lt;code&gt;obj&lt;/code&gt; with an instance of &lt;code&gt;Myclas&lt;/code&gt; like the flowing :&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;arrayData.add(new MyClass(obj.name, obj.surname, obj.age));&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;and it worked ! But i still can&#x27;t understand why &lt;code&gt;arrayData.add(obj);&lt;/code&gt; doesn&#x27;t work while it seems the same thing as &lt;code&gt;arrayData.add(new MyClass(obj.name, obj.surname, obj.age)); &lt;/code&gt; ?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554728</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">C&#x2B;&#x2B; side effects with acquire/release ordering</title>
+        <category scheme="https://stackoverflow.com/tags" term="c&#x2B;&#x2B;" />
+        <category scheme="https://stackoverflow.com/tags" term="atomic" />
+        <category scheme="https://stackoverflow.com/tags" term="memory-barriers" />
+        <category scheme="https://stackoverflow.com/tags" term="side-effects" />
+        <author>
+            <name>Despise</name>
+            <uri>https://stackoverflow.com/users/12788072</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554728/c-side-effects-with-acquire-release-ordering" />
+        <published>2021-10-13T11:30:21Z</published>
+        <updated>2021-10-13T11:30:21Z</updated>
+        <summary type="html">
+            &lt;p&gt;After reading &amp;quot;Concurrency in action&amp;quot; I could not find an answer to one question - are there guarantees in the standard for reading side effects when we have one store(release) and many load(acquire) on one atomic variable?&#xA;Suppose we have:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;int i{};&#xA;atomic&amp;lt;bool&amp;gt; b{};&#xA;&#xA;void wrighter(){&#xA; i=42;&#xA; b.store(true,memory_order_release);&#xA;}&#xA;&#xA;void reader(){&#xA; while(!b.load(memory_order_acquire))&#xA;    this_thread::yield();&#xA; assert(i==42);&#xA;}&#xA;//---------------------&#xA;thread t1{wrighter},t2{reader},t3{reader};&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Can we have failed assertion in t2 or t3 thread?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554727</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Plotting of higher degree functions is wrong in Maxima</title>
+        <category scheme="https://stackoverflow.com/tags" term="plot" />
+        <category scheme="https://stackoverflow.com/tags" term="maxima" />
+        <category scheme="https://stackoverflow.com/tags" term="wxmaxima" />
+        <author>
+            <name>ThePhi</name>
+            <uri>https://stackoverflow.com/users/1937033</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554727/plotting-of-higher-degree-functions-is-wrong-in-maxima" />
+        <published>2021-10-13T11:30:19Z</published>
+        <updated>2021-10-13T11:30:19Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#x27;m a complete beginner in wxMaxima.&lt;/p&gt;&#xA;&lt;p&gt;I&#x27;m trying to plot this graph: &lt;code&gt;f(x) = x^5&#x2B;x^4-5x^3-5x^2&#x2B;x&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;You can see on Desmos.com (&lt;a href=&quot;https://www.desmos.com/calculator&quot; rel=&quot;nofollow noreferrer&quot;&gt;https://www.desmos.com/calculator&lt;/a&gt;) that it looks like this:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&quot;https://i.stack.imgur.com/BeNqb.png&quot; rel=&quot;nofollow noreferrer&quot;&gt;&lt;img src=&quot;https://i.stack.imgur.com/BeNqb.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;But now, plotting it with Maxima:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;(%i4)   f(x):= x^5&#x2B;x^4-5*x^3-5*x^2&#x2B;x;&#xA;(%o4)   f(x):=x^5&#x2B;x^4&#x2B;(-5)*x^3&#x2B;(-5)*x^2&#x2B;x&#xA;&#xA;(%i5)   wxplot2d(f(x), [x, -50, 50]);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;a href=&quot;https://i.stack.imgur.com/7WV3o.png&quot; rel=&quot;nofollow noreferrer&quot;&gt;&lt;img src=&quot;https://i.stack.imgur.com/7WV3o.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I don&#x27;t know what I&#x27;m doing wrong. I&#x27;ve tried to plot more simple graphs (like parabolas), and the graph is right, but not for this higher degree functions.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554726</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">VBA: tool using Vlookup in other file using path</title>
+        <category scheme="https://stackoverflow.com/tags" term="excel" />
+        <category scheme="https://stackoverflow.com/tags" term="vba" />
+        <category scheme="https://stackoverflow.com/tags" term="path" />
+        <category scheme="https://stackoverflow.com/tags" term="vlookup" />
+        <author>
+            <name>Willem Martens</name>
+            <uri>https://stackoverflow.com/users/8009690</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554726/vba-tool-using-vlookup-in-other-file-using-path" />
+        <published>2021-10-13T11:30:14Z</published>
+        <updated>2021-10-13T11:30:14Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#x27;m trying to create a tool in which I can select 2 files. In the first file (File1 in range B2) a few changes are made before looking up values in the second file (File2 in range B3) and paste them in the first file. I&#x27;ve created two buttons in the tool to select the files.&lt;/p&gt;&#xA;&lt;p&gt;I want to a write code to lookup values in the second file but I&#x27;m getting different errors retrieving the information from the second second file. Can anyone help me with this?&lt;/p&gt;&#xA;&lt;p&gt;I need to paste the values in the 8th row from the second file in the first file (same column) using the lookup value from the first collumn.&lt;/p&gt;&#xA;&lt;p&gt;See code below: this is what I tried. Debugging needed in the vlookup subsection. Can anyone help me with this? Is there an easier way to lookup the values?&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Sub Past_dues_button12345()&#xA;&#x27;Macro to create past due list daily&#xA;Dim wb1 As Excel.Workbook&#xA;Dim File As String&#xA;Dim File2 As String&#xA;&#xA;File = Sheets(&amp;quot;Tool&amp;quot;).Range(&amp;quot;B2&amp;quot;)&#xA;File2 = Sheets(&amp;quot;Tool&amp;quot;).Range(&amp;quot;B3&amp;quot;)&#xA;&#xA;&#xA;Set wb1 = Workbooks.Open(File)&#xA;&#xA;remove_repair&#xA;add_collumns_with_comments&#xA;add_data_new_collumn&#xA;vlookup&#xA;pastevalues&#xA;Sharewb&#xA;&#xA;&#xA;End Sub&#xA;&#xA;&#xA;&#xA;Sub add_collumns_with_comments()&#xA;&#xA;    Columns(&amp;quot;F:F&amp;quot;).Select&#xA;    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove&#xA;    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove&#xA;    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove&#xA;    Range(&amp;quot;Table1[[#Headers],[Column3]]&amp;quot;).Select&#xA;    ActiveCell.FormulaR1C1 = &amp;quot;PN&amp;quot;&#xA;    Range(&amp;quot;Table1[[#Headers],[Column2]]&amp;quot;).Select&#xA;    ActiveCell.FormulaR1C1 = &amp;quot;MRPc&amp;quot;&#xA;    Range(&amp;quot;Table1[[#Headers],[Column1]]&amp;quot;).Select&#xA;    ActiveCell.FormulaR1C1 = &amp;quot;Comment&amp;quot;&#xA;    &#xA;End Sub&#xA;&#xA;&#xA;Sub vlookup()&#xA;&#xA;    &#xA;    &#xA;    Dim rw As Long, x As Range&#xA;    Dim extwbk As Workbook, twb As Workbook&#xA;&#xA;    Set twb = ThisWorkbook&#xA;    &#xA;    Workbooks(&amp;quot;Tool_SO.XLSM&amp;quot;).Activate&#xA;    File2 = Sheets(&amp;quot;Tool&amp;quot;).Range(&amp;quot;B3&amp;quot;)&#xA;    &#xA;    Set extwbk = Workbooks.Open(File2)&#xA;    &#xA;&#xA;    &#xA;    Set x = extwbk.Worksheets(&amp;quot;Material Availability&amp;quot;).Range(&amp;quot;A1:H1000&amp;quot;)&#xA;&#xA;    With twb.Sheets(&amp;quot;Material Availability&amp;quot;)&#xA;&#xA;        For rw = 2 To .Cells(Rows.Count, 1).End(xlUp).Row&#xA;            .Cells(rw, 2) = Application.vlookup(.Cells(rw, 1).Value2, x, 8, False)&#xA;        Next rw&#xA;&#xA;    End With&#xA;&#xA;    extwbk.Close savechanges:=False&#xA;    &#xA;End Sub&#xA;&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554725</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">recyclerview stick to a position with image zoom in/out animation while scrolling</title>
+        <category scheme="https://stackoverflow.com/tags" term="android" />
+        <category scheme="https://stackoverflow.com/tags" term="android-recyclerview" />
+        <category scheme="https://stackoverflow.com/tags" term="android-animation" />
+        <category scheme="https://stackoverflow.com/tags" term="android-scrollview" />
+        <category scheme="https://stackoverflow.com/tags" term="android-coordinatorlayout" />
+        <author>
+            <name>Salman khan</name>
+            <uri>https://stackoverflow.com/users/2298631</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554725/recyclerview-stick-to-a-position-with-image-zoom-in-out-animation-while-scrollin" />
+        <published>2021-10-13T11:30:03Z</published>
+        <updated>2021-10-13T11:30:03Z</updated>
+        <summary type="html">
+            &lt;p&gt;When we scroll the view, the recyclerview sticks to a position and the image should zoom out with animation. Tried with the coordinator layout and toolbar as well but did not get success. Any help or idea would highly appreciable.&lt;/p&gt;&#xA;&lt;p&gt;As you can see in GIF, how it is going.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&quot;https://i.stack.imgur.com/cSslr.gif&quot; rel=&quot;nofollow noreferrer&quot;&gt;&lt;img src=&quot;https://i.stack.imgur.com/cSslr.gif&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554719</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Accessing JPA repositories in a child thread invoked from the service layer in spring boot</title>
+        <category scheme="https://stackoverflow.com/tags" term="multithreading" />
+        <category scheme="https://stackoverflow.com/tags" term="spring-boot" />
+        <category scheme="https://stackoverflow.com/tags" term="jpa" />
+        <category scheme="https://stackoverflow.com/tags" term="repository" />
+        <category scheme="https://stackoverflow.com/tags" term="service-layer" />
+        <author>
+            <name>Aditya Urs</name>
+            <uri>https://stackoverflow.com/users/17141907</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554719/accessing-jpa-repositories-in-a-child-thread-invoked-from-the-service-layer-in-s" />
+        <published>2021-10-13T11:29:31Z</published>
+        <updated>2021-10-13T11:29:31Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#x27;m trying to create a child thread of a private class inside a service layer to perform some database operations asynchronously. Following is the relevant part of the code:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;public class GoogleServiceImpl implements BaseService {&#xA;&#xA;  private final OrderRepository orderRepository;&#xA;  private final AddressRepository addressRepository;&#xA;&#xA;  public void updateOrdersGeodata(Long userId) {&#xA;    ...&#xA;    MissingLatLngThread childThread = new MissingLatLngThread(ordersWithoutGeoDataList, &#xA;    orderRepository, addressRepository, googleMapsAPIKey);&#xA;  }&#xA;&#xA;  private class MissingLatLngThread extends Thread {&#xA;    &#xA;    AddressRepository addressRepository;&#xA;    OrderRepository orderRepository;&#xA;    ...&#xA;&#xA;    public MissingLatLngThread(List&amp;lt;OrderWithoutGeoData&amp;gt; ordersWithoutGeoData, &#xA;        OrderRepository orderRepository, AddressRepository addressRepository,&#xA;        String googleMapsAPIKey) {&#xA;      &#xA;      this.ordersWithoutGeoData = ordersWithoutGeoData;&#xA;      this.dLOrderRepository = dLOrderRepository;&#xA;      this.dlAddressRepository = dlAddressRepository;&#xA;      this.googleMapsAPIKey = googleMapsAPIKey;&#xA;      this.start();&#xA;    }&#xA;    &#xA;    public void run() {&#xA;    ...&#xA;    // calls other private methods that access and perform operations on the database&#xA;    }&#xA;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Given that the child thread is an instance of the main thread, I&#x27;m assuming it would keep the main thread and all of the main thread&#x27;s instances alive till its operations are concluded. I would like to know if it is still necessary to pass the repository objects to the child thread, as shown in the code, in order to perform database operations by the child thread.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554716</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Build Repast Models via CLI</title>
+        <category scheme="https://stackoverflow.com/tags" term="java" />
+        <category scheme="https://stackoverflow.com/tags" term="command-line-interface" />
+        <category scheme="https://stackoverflow.com/tags" term="repast-simphony" />
+        <author>
+            <name>lutapp</name>
+            <uri>https://stackoverflow.com/users/17142198</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554716/build-repast-models-via-cli" />
+        <published>2021-10-13T11:29:24Z</published>
+        <updated>2021-10-13T11:29:24Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am currently looking for a way to build repast models via cli and then start the model with the batch-runner. Later the process is supposed to be automatically executed within a CI/CD pipeline. Therefore the building process should be executed independent from Eclipse.&lt;/p&gt;&#xA;&lt;p&gt;I have already tried the Java compiler and the Groovy compiler which had issues locating the repast specific classes. Currently only works via cli with the Equinox launcher within eclipse and only when the model is in an Eclipse workspace. However, the model needs to be built independently of Eclipse.&lt;/p&gt;&#xA;&lt;p&gt;Does anyone perhaps have an idea about the problem?&lt;/p&gt;&#xA;&lt;p&gt;Greetings&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554715</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">imported schema not found when running executable jar</title>
+        <category scheme="https://stackoverflow.com/tags" term="java" />
+        <category scheme="https://stackoverflow.com/tags" term="xml" />
+        <category scheme="https://stackoverflow.com/tags" term="maven" />
+        <category scheme="https://stackoverflow.com/tags" term="xsd" />
+        <category scheme="https://stackoverflow.com/tags" term="xjc" />
+        <author>
+            <name>Rinke</name>
+            <uri>https://stackoverflow.com/users/12592592</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554715/imported-schema-not-found-when-running-executable-jar" />
+        <published>2021-10-13T11:29:23Z</published>
+        <updated>2021-10-13T11:29:23Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have a complicated java/maven project which reads input from an xml. The input file is read and parsed via xjc/maven into generated java classes. The xsd for the input file uses an imported xsd which defines some common types (so it is called commonTypes.xsd).&lt;/p&gt;&#xA;&lt;p&gt;When I test and run the application from my IDE (Eclipse) all is fine, the inputfile parser finds the xsd including the commonTypes.xsd, input is read and application runs as expected.&lt;/p&gt;&#xA;&lt;p&gt;However, when I built an executable jar from this project, the inputfile parser runs into an exception because it can&#x27;t find all the xsd types defined in the commonTypes.xsd, resulting in a completely unusable executable.&lt;/p&gt;&#xA;&lt;p&gt;This is the maven part for building the jar:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;plugin&amp;gt;&#xA;   &amp;lt;artifactId&amp;gt;maven-assembly-plugin&amp;lt;/artifactId&amp;gt;&#xA;   &amp;lt;configuration&amp;gt;&#xA;      &amp;lt;archive&amp;gt;&#xA;         &amp;lt;manifest&amp;gt;&#xA;            &amp;lt;mainClass&amp;gt;my.Mainclass&amp;lt;/mainClass&amp;gt;&#xA;         &amp;lt;/manifest&amp;gt;&#xA;      &amp;lt;/archive&amp;gt;&#xA;      &amp;lt;descriptorRefs&amp;gt;&#xA;         &amp;lt;descriptorRef&amp;gt;jar-with-dependencies&amp;lt;/descriptorRef&amp;gt;&#xA;      &amp;lt;/descriptorRefs&amp;gt;&#xA;   &amp;lt;/configuration&amp;gt;&#xA;   &amp;lt;executions&amp;gt;&#xA;      &amp;lt;execution&amp;gt;&#xA;         &amp;lt;id&amp;gt;make-assembly&amp;lt;/id&amp;gt;&#xA;         &amp;lt;phase&amp;gt;package&amp;lt;/phase&amp;gt;&#xA;         &amp;lt;goals&amp;gt;&#xA;            &amp;lt;goal&amp;gt;single&amp;lt;/goal&amp;gt;&#xA;         &amp;lt;/goals&amp;gt;&#xA;      &amp;lt;/execution&amp;gt;&#xA;   &amp;lt;/executions&amp;gt;&#xA;&amp;lt;/plugin&amp;gt;&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;main schema is declared like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;xs:schema&#xA;    xmlns=&amp;quot;http://my/app&amp;quot;&#xA;    targetNamespace=&amp;quot;http://my/app&amp;quot;&#xA;    xmlns:xs=&amp;quot;http://www.w3.org/2001/XMLSchema&amp;quot;&#xA;    xmlns:mgz=&amp;quot;http://my/app/commonTypes&amp;quot;&#xA;&amp;gt;&#xA;    &#xA;    &amp;lt;xs:import namespace=&amp;quot;http://my/app/commonTypes&amp;quot; /&amp;gt;&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;There is a catalog.xml file storing the namespaces&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&#xA;&amp;lt;catalog xmlns=&amp;quot;urn:oasis:names:tc:entity:xmlns:xml:catalog&amp;quot; &amp;gt;&#xA;    &amp;lt;public publicId=&amp;quot;http://my/app/commonTypes&amp;quot; uri=&amp;quot;xsds/commonTypes.xsd&amp;quot;/&amp;gt;&#xA;    &amp;lt;uri name=&amp;quot;http://my/app/commonTypes&amp;quot; uri=&amp;quot;xsds/commonTypes.xsd&amp;quot;/&amp;gt;&#xA;&amp;lt;/catalog&amp;gt;&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Anyone any ideas how to solve this?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554714</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Survival curves with random effect in R</title>
+        <category scheme="https://stackoverflow.com/tags" term="r" />
+        <category scheme="https://stackoverflow.com/tags" term="survival" />
+        <author>
+            <name>Elodie</name>
+            <uri>https://stackoverflow.com/users/10613840</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554714/survival-curves-with-random-effect-in-r" />
+        <published>2021-10-13T11:29:21Z</published>
+        <updated>2021-10-13T11:29:21Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am trying to use a survival approach to model the event &amp;quot;left an area&amp;quot; for an individual.&#xA;My data set looks like the following:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;fptdf = data.frame(time = runif(25, min=0, max=25),&#xA;               animal_id = c(rep(c(&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;),each = 10), rep(&amp;quot;C&amp;quot;,5)),&#xA;               gender = c(rep(&amp;quot;m&amp;quot;,10), rep(&amp;quot;f&amp;quot;,15)))&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;with time, the time (in days) that an individual spends in a given area; animal_id, the identity of the individual and gender, the gender of the individual.&#xA;Because individuals encounter many areas, I have more than one data point for each individual, so each individual has several events &amp;quot;left an area&amp;quot;.&lt;/p&gt;&#xA;&lt;p&gt;I want to include a random effect and I want to estimate the survival curves, which in my case would be the probability of staying in an area over time.&lt;/p&gt;&#xA;&lt;p&gt;I am using the &lt;code&gt;survfit()&lt;/code&gt; function in the R &lt;code&gt;survival&lt;/code&gt; package to create Kaplan-Meier survival curves and survival curves from a &lt;code&gt;survfit.coxph&lt;/code&gt; object produced by &lt;code&gt;coxph()&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I include the random effect with a frailty term. However, when I estimate the Kaplan-Meier curve with a frailty term, I get a survival curve for each individual.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;KM0 &amp;lt;- survfit(Surv(time) ~ 1 &#x2B; frailty(animal_id),  type=&amp;quot;kaplan-meier&amp;quot;, conf.type=&amp;quot;log&amp;quot;, data=fptdf)&#xA;ggsurvplot(KM0)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I, therefore, made a Cox Proportional Hazard model with a frailty term for the individual as follows&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;mfrailty1 &amp;lt;- coxph(Surv(time) ~ 1 &#x2B; frailty(animal_id), data = fptdf)&#xA;ggsurvplot(survfit(mfrailty1), data=fptdf)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;This generates the overall survival curve (without covariates).&#xA;When I additionally include the gender as a covariate in my Cox model, I only get one survival curve, not one for each gender level&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;mfrailty2 &amp;lt;- coxph(Surv(time) ~ gender &#x2B; frailty(animal_id), data = fptdf)&#xA;ggsurvplot(survfit(mfrailty2),data=fptdf)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Can someone tell me what the survival curve estimated by the model is? Is it the survival curve for the baseline or is it the average for all individuals? And is it possible to estimate a survival curve for each level of covariate?&#xA;When I was testing a Cox model without a frailty term, I could create a survival curve for each gender with this code&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;sex_df &amp;lt;- with(fptdf, data.frame(gender = c(&amp;quot;m&amp;quot;,&amp;quot;f&amp;quot;)))&#xA;survfit(mcox, newdata = gender_df)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;However, it seems that I cannot use newdata when a model has a frailty term.&lt;/p&gt;&#xA;&lt;p&gt;Help appreciated!&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554650</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Build an automation program/script on Windows</title>
+        <category scheme="https://stackoverflow.com/tags" term="windows" />
+        <category scheme="https://stackoverflow.com/tags" term="shell" />
+        <category scheme="https://stackoverflow.com/tags" term="batch-file" />
+        <category scheme="https://stackoverflow.com/tags" term="automation" />
+        <author>
+            <name>Devin Y</name>
+            <uri>https://stackoverflow.com/users/9543351</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554650/build-an-automation-program-script-on-windows" />
+        <published>2021-10-13T11:24:50Z</published>
+        <updated>2021-10-13T11:29:54Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#x27;ve two projects written in node and GO. If one of them gets higher load it, stops. So I&#x27;ve to manually restart both projects to run again. I&#x27;m thinking of a way to restart both projects every morning and evening automatically by some kind of program or code script. It would be great if I get some advice. Thanks&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554554</id>
+        <re:rank scheme="https://stackoverflow.com">1</re:rank>
+        <title type="text">Cannot perform &#x27;rand_&#x27; with a dtyped [float64] array and scalar of type [bool]</title>
+        <category scheme="https://stackoverflow.com/tags" term="python" />
+        <category scheme="https://stackoverflow.com/tags" term="pandas" />
+        <category scheme="https://stackoverflow.com/tags" term="pyspark" />
+        <category scheme="https://stackoverflow.com/tags" term="filter" />
+        <author>
+            <name>yorch</name>
+            <uri>https://stackoverflow.com/users/17142135</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554554/cannot-perform-rand-with-a-dtyped-float64-array-and-scalar-of-type-bool" />
+        <published>2021-10-13T11:18:53Z</published>
+        <updated>2021-10-13T11:29:54Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am trying to filter a dataframe in pandas with multiple conditions and I keep getting the same error:&#xA;Cannot perform &#x27;rand_&#x27; with a dtyped [float64] array and scalar of type [bool]&lt;/p&gt;&#xA;&lt;p&gt;I have tried several solutions such as changing the operator (or/and instead of |/&amp;amp;); I have reviewed the parenthesis...&lt;/p&gt;&#xA;&lt;p&gt;Code:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;df= pd.DataFrame(df)&#xA;&#xA;filtered = (((df[&#x27;a&#x27;] == &#x27;str1&#x27;) |&#xA;           (df[&#x27;a&#x27;] == &#x27;str2&#x27;) | &#xA;           (df[&#x27;a&#x27;] == &#x27;str3&#x27;) | &#xA;           (df[&#x27;a&#x27;] == &#x27;str4&#x27;)) &amp;amp; &#xA;           (df[&#x27;b&#x27;] &amp;gt;= 13))&#xA;&#xA;df= df[filtered]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554513</id>
+        <re:rank scheme="https://stackoverflow.com">-1</re:rank>
+        <title type="text">Reading a list of numbers from a txt file excluding certain numbers and words</title>
+        <category scheme="https://stackoverflow.com/tags" term="python" />
+        <category scheme="https://stackoverflow.com/tags" term="import" />
+        <category scheme="https://stackoverflow.com/tags" term="txt" />
+        <author>
+            <name>Adam Jackson</name>
+            <uri>https://stackoverflow.com/users/17106272</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554513/reading-a-list-of-numbers-from-a-txt-file-excluding-certain-numbers-and-words" />
+        <published>2021-10-13T11:16:21Z</published>
+        <updated>2021-10-13T11:30:26Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have a .txt file as follows:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;C:\Temp\stick\zNsNo-MAGNETRON\MAG-ZnSnO-1-XPS.vms&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;None&#xA;    Characteristic Energy eV    1486.7  Acquisition Time s  3&#xA;KE_None BE_None CPS_None    Background_None&#xA;1472.7  14  735 735&#xA;1472.8  13.9    708 708&#xA;1472.9  13.8    725 725&#xA;1473    13.7    699 699&#xA;1473.1  13.6    734 734&#xA;1473.2  13.5    738 738&#xA;1473.3  13.4    776 776&#xA;1473.4  13.3    785 785&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;and am trying to extract the numbers under &amp;quot;KE_None&amp;quot; into a list and the numbers under &amp;quot;CPS_None&amp;quot; to eventually plot them against each other. I am finding it hard to get those two lists while excluding the other numbers under &amp;quot;BE_None&amp;quot; and &amp;quot;Background_None&amp;quot; while also ignoring the first few lines of the file. Hope you can help. This is what I have so far which imports the text as a whole.&lt;/p&gt;&#xA;&lt;p&gt;My current code:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&quot;https://i.stack.imgur.com/IGsiR.png&quot; alt=&quot;Code so far&quot; /&gt;&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554499</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to append string and variable in terraform</title>
+        <category scheme="https://stackoverflow.com/tags" term="terraform" />
+        <category scheme="https://stackoverflow.com/tags" term="fusionauth" />
+        <author>
+            <name>cloudbud</name>
+            <uri>https://stackoverflow.com/users/2782824</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554499/how-to-append-string-and-variable-in-terraform" />
+        <published>2021-10-13T11:15:44Z</published>
+        <updated>2021-10-13T11:30:29Z</updated>
+        <summary type="html">
+            &lt;p&gt;How can I concatenate string and a variable in terraform. I am using terraform version 1.7&lt;/p&gt;&#xA;&lt;p&gt;Name = &amp;quot;Test (Environment_Name)&amp;quot; where environment_name will be test,stage and prod.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;    resource &amp;quot;fusionauth_tenant&amp;quot; &amp;quot;tanant&amp;quot; {&#xA;  name = &amp;quot;Test (Environment_name)&amp;quot;&#xA;  email_configuration {&#xA;    default_from_name                 = &amp;quot;FusionAuth [Environment_name]&amp;quot;&#xA;    verification_email_template_id    = fusionauth_email.verification_template.id&#xA;  }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554410</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">removing mentions (discord.js 12.5.3)</title>
+        <category scheme="https://stackoverflow.com/tags" term="javascript" />
+        <category scheme="https://stackoverflow.com/tags" term="discord.js" />
+        <author>
+            <name>keisi</name>
+            <uri>https://stackoverflow.com/users/17142121</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554410/removing-mentions-discord-js-12-5-3" />
+        <published>2021-10-13T11:08:22Z</published>
+        <updated>2021-10-13T11:29:31Z</updated>
+        <summary type="html">
+            &lt;p&gt;I need to remove a user mention from message content, but nothing works.&#xA;Discord.js version: 12.5.3&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;var content = message.content.toLowerCase().slice(6).trim().replace(/@(everyone)/gi, &amp;quot;@ev&#x435;ryone&amp;quot;).replace(/@(here)/gi, &amp;quot;@h&#x435;re&amp;quot;);&#xA;   !message.content.trim().endsWith(&#x27;-test&#x27;);&#xA;&#xA;   if (message.mentions.users.size) {&#xA;      const mentioned = message.mentions.users.first();&#xA;      content.replace(``, &#x27;&#x27;) // here is a problem&#xA;      var form = `${content}`;&#xA;   } else {&#xA;      doSomething()&#xA;   }&#xA;message.channel.send(form);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554317</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Safari 15.0 video background position fixed not working on page load</title>
+        <category scheme="https://stackoverflow.com/tags" term="html" />
+        <category scheme="https://stackoverflow.com/tags" term="safari" />
+        <author>
+            <name>BatDan420</name>
+            <uri>https://stackoverflow.com/users/17141993</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554317/safari-15-0-video-background-position-fixed-not-working-on-page-load" />
+        <published>2021-10-13T11:02:18Z</published>
+        <updated>2021-10-13T11:30:24Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am having some strange issues with Safari 15.0.&lt;/p&gt;&#xA;&lt;p&gt;I have put a jsfiddle test up here: &lt;a href=&quot;https://jsfiddle.net/batdan420/3jrvgc2p/3/&quot; rel=&quot;nofollow noreferrer&quot;&gt;https://jsfiddle.net/batdan420/3jrvgc2p/3/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The issue seems to be to do with the video element&#x27;s background starting out as position fixed.&lt;/p&gt;&#xA;&lt;p&gt;This has worked on other versions of Safari (and other browsers) for many years but when I updated Safari, I found that the sites I am using the code on no longer displays the background video when the page loads...&lt;/p&gt;&#xA;&lt;p&gt;The above example should make it easier to diagnose/confirm the issue but if you want to see the code without going to the test here is the line of code that is causing issues:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;  &amp;lt;video style=&amp;quot;left: 0;top: 0;height:100%;position:fixed;width: 100%;z-index: -20;&amp;quot; autoplay loop muted playsinline&amp;gt;&#xA;   &amp;lt;source src=&amp;quot;https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4&amp;quot;&amp;gt;&#xA;   &amp;lt;/video&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I was able to fix the issue by REMOVING the position from the css (that is inline for testing purposes) and THEN using javascript/jquery to set the css of the video element to position fixed AFTER the document is ready but this is not the most ideal solution.&lt;/p&gt;&#xA;&lt;p&gt;The issue does NOT seem to happen on current versions of Chrome (94.0) or Firefox (93.0).&lt;/p&gt;&#xA;&lt;p&gt;Perhaps there is something wrong with my code? or is this an issue with Safari 15.0?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554132</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">how to add &lt;a&gt; HTML tag in json array object</title>
+        <category scheme="https://stackoverflow.com/tags" term="javascript" />
+        <category scheme="https://stackoverflow.com/tags" term="html" />
+        <category scheme="https://stackoverflow.com/tags" term="jquery" />
+        <author>
+            <name>deepak j</name>
+            <uri>https://stackoverflow.com/users/13839444</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554132/how-to-add-a-html-tag-in-json-array-object" />
+        <published>2021-10-13T10:47:33Z</published>
+        <updated>2021-10-13T11:29:47Z</updated>
+        <summary type="html">
+            &lt;p&gt;i am new to creating array object , and i dont know how to add link in  tag in json file&lt;/p&gt;&#xA;&lt;p&gt;json object code:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-js prettyprint-override&quot;&gt;&lt;code&gt;powerUpList: [ &#xA;  {&#xA;    id: 8,&#xA;    name: &#x27;Automate your API column type &#x27;,&#xA;    description: &#x27;Set automated schedules (daily, 3 days, weekly, biweekly, monthly) on your API column type and keep yourself up to date at all times. Note: Please check total limits based on your plan. &#x27;,&#xA;    category: &#x27;Automation&#x27;,&#xA;    status: 0,&#xA;  },&#xA;  {&#xA;    id: 9,&#xA;    name: &#x27;Google Drive Sync &#x27;,&#xA;    description: &#x27;Sync your stacks directly with your Google Drive Account and open/create stacks from Google Drive.&#x27;,&#xA;    category: &#x27;Apps&#x27;,&#xA;    status: 0,&#xA;  },&#xA;  {&#xA;    id: 10,&#xA;    name: &#x27;Google Chrome Extension&#x27;,&#xA;    description: &#x27;Clip information from any webpage, through a custom google chrome extension.&amp;lt;a href=&amp;quot;https://chrome.google.com/webstore/detail/stackby-webclipper/kjkhpjfgbiedbaohfklagjmcdjhamoje&amp;quot; &amp;gt; Download it from here.&amp;lt;/a&amp;gt;&#x27;,&#xA;    category: &#x27;Apps&#x27;,&#xA;    status: 0,&#xA;  },&#xA;  {&#xA;    id: 11,&#xA;    name: &#x27;Color Formatting on Rows&#x27;,&#xA;    description: &#x27;Add colors on rows based on pre-defined conditions. &#x27;,&#xA;    category: &#x27;Data Transformation&#x27;,&#xA;    status: 0,&#xA;  },&#xA;  {&#xA;    id: 12,&#xA;    name: &#x27;Database Snapshots&#x27;,&#xA;    description: &#x27;Take a manual, point-in-time snapshot of your database and recover it at a later time. Note: Duration for snapshot history is based on the plans. &#x27;,&#xA;    category: &#x27;Data Recovery&#x27;,&#xA;    status: 1,&#xA;  },&#xA;],&#xA;&#xA;powerUpCategoryList: [&#xA;  &#x27;Data Recovery&#x27;,&#xA;  &#x27;Import&#x27;,&#xA;  &#x27;Data Transformation&#x27;,&#xA;  &#x27;Sharing&#x27;,&#xA;  &#x27;Automation&#x27;,&#xA;  &#x27;Apps&#x27;,&#xA;],&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;this is my json file code&lt;/p&gt;&#xA;&lt;p&gt;and this is actual code in .ejs where all instance perform , and the accordian does not close ,&lt;/p&gt;&#xA;&lt;p&gt;powerup.ejs&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-html prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;col-md-9&amp;quot; id=&amp;quot;root&amp;quot;&amp;gt;&#xA;  &amp;lt;div role=&amp;quot;tablist&amp;quot; id=&amp;quot;accordion-1&amp;quot;&amp;gt;&#xA;    &amp;lt;%for (var i = 0; i &amp;lt; powerUpList.length; i&#x2B;&#x2B;) { %&amp;gt;&#xA;      &amp;lt;div class=&amp;quot;card&amp;quot;&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;card-header&amp;quot; role=&amp;quot;tab&amp;quot;&amp;gt;&#xA;          &amp;lt;a data-toggle=&amp;quot;collapse&amp;quot; aria-expanded=&amp;quot;true&amp;quot; aria-controls=&amp;quot;accordion-1 .item-&amp;lt;%= i&#x2B;1 %&amp;gt;&amp;quot; href=&amp;quot;div#accordion-1 .item-&amp;lt;%= i&#x2B;1 %&amp;gt;&amp;quot;&amp;gt;&amp;lt;%= powerUpList[i].name%&amp;gt;&amp;lt;/a&amp;gt;&#xA;&#xA;          &amp;lt;%if (powerUpList[i].status == 0) { %&amp;gt;&#xA;              &amp;lt;a class=&amp;quot;live-lable status-live&amp;quot; &amp;gt;&#xA;                Live &#xA;              &amp;lt;/a&amp;gt;&#xA;            &amp;lt;%}else if(powerUpList[i].status == 1){-%&amp;gt;&#xA;              &amp;lt;a class=&amp;quot;live-lable status-comingsoon&amp;quot; &amp;gt;&#xA;                Coming soon &#xA;              &amp;lt;/a&amp;gt; &#xA;            &amp;lt;%}else if(powerUpList[i].status == 2){-%&amp;gt;&#xA;              &amp;lt;a class=&amp;quot;live-lable status-beta&amp;quot; &amp;gt;&#xA;                In-Beta &#xA;              &amp;lt;/a&amp;gt; &#xA;            &amp;lt;%}-%&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;collapse show item-&amp;lt;%= i&#x2B;1 %&amp;gt;&amp;quot; role=&amp;quot;tabpanel&amp;quot; data-parent=&amp;quot;#accordion-1&amp;quot;&amp;gt;&#xA;            &amp;lt;div class=&amp;quot;card-body&amp;quot;&amp;gt;&#xA;                &amp;lt;p class=&amp;quot;card-text&amp;quot; &amp;gt;&amp;lt;%= powerUpList[i].description%&amp;gt;&amp;lt;/p&amp;gt;&#xA;            &amp;lt;/div&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;      &amp;lt;/div&amp;gt;&#xA;    &amp;lt;%}-%&amp;gt;&#xA;  &amp;lt;/div&amp;gt;&#xA;&amp;lt;/div&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;here , i want to show in &lt;strong&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/stackby-webclipper/kjkhpjfgbiedbaohfklagjmcdjhamoje&quot; rel=&quot;nofollow noreferrer&quot; &gt; Download it from here.&lt;/a&gt;&#x27;,&lt;/strong&gt;  in as download link , but it show whole url ,&lt;a href=&quot;https://i.stack.imgur.com/rIUnB.png&quot; rel=&quot;nofollow noreferrer&quot;&gt;&lt;img src=&quot;https://i.stack.imgur.com/rIUnB.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69554074</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to merge two arrays using a property?</title>
+        <category scheme="https://stackoverflow.com/tags" term="javascript" />
+        <author>
+            <name>moor</name>
+            <uri>https://stackoverflow.com/users/10255139</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69554074/how-to-merge-two-arrays-using-a-property" />
+        <published>2021-10-13T10:43:56Z</published>
+        <updated>2021-10-13T11:29:50Z</updated>
+        <summary type="html">
+            &lt;p&gt;I want to create an (output) array of objects from one or multiple other (input) arrays.&lt;/p&gt;&#xA;&lt;p&gt;For two input arrays defined as:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-js prettyprint-override&quot;&gt;&lt;code&gt;var array1 = [&#xA;    { id: 1, name: &#x27;a1&#x27;},&#xA;    { id: 2, name: &#x27;a2&#x27;},&#xA;    { id: 3, name: &#x27;a3&#x27;},&#xA;    { id: 4, name: &#x27;a4&#x27;},&#xA;    { id: 5, name: &#x27;a5&#x27;},&#xA;];&#xA;&#xA;var array2 = [&#xA;    { id: 1, name: &#x27;a1&#x27;, sub: { data: &#x27;we&#x27; } },&#xA;    { id: 2, name: &#x27;a2&#x27;, sub: { data: &#x27;dfd&#x27; } },&#xA;    { id: 5, name: &#x27;a5&#x27;, sub: { data: &#x27;vbf&#x27; } },&#xA;];&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;...the resulting (output) array should be:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-js prettyprint-override&quot;&gt;&lt;code&gt;var newarray = [&#xA;    { id: 1, name: &#x27;a1&#x27;, sub: { data: &#x27;we&#x27; } },&#xA;    { id: 2, name: &#x27;a2&#x27;, sub: { data: &#x27;dfd&#x27; } },&#xA;    { id: 3, name: &#x27;a3&#x27;, sub: {}},&#xA;    { id: 4, name: &#x27;a4&#x27;, sub: {}},&#xA;    { id: 5, name: &#x27;a5&#x27;, sub: { data: &#x27;vbf&#x27; } },&#xA;];&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I have tried the following but there is a mistake there somewhere:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-js prettyprint-override&quot;&gt;&lt;code&gt;var newarray = [];&#xA;var oArray = {};&#xA;for(var i = 0; i &amp;lt;= array1.length;) {&#xA;    for(var j = 0; j &amp;lt;= array2.length; j&#x2B;&#x2B;) {&#xA;        if(array1[i].id === array2[j].id) {&#xA;            oArray = {&#xA;                &amp;quot;id&amp;quot;:  array1[i].id,&#xA;                 &amp;quot;name&amp;quot;: array1[i].name,&#xA;                 &amp;quot;sub&amp;quot;: array1[i].sub &#xA;            };&#xA;            newarray.push(oArray);&#xA;            i&#x2B;&#x2B;;&#xA;            break;&#xA;        } else {  &#xA;            oArray = {&#xA;                    &amp;quot;id&amp;quot;:  array1[i].id,&#xA;                     &amp;quot;name&amp;quot;: array1[i].name,&#xA;                     &amp;quot;sub&amp;quot;: array1[i].sub &#xA;                };&#xA;                newarray.push(oArray);&#xA;        }&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69553768</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Converting a multi-dimensional dictionary which contains an array of pandas series to a csv</title>
+        <category scheme="https://stackoverflow.com/tags" term="python" />
+        <category scheme="https://stackoverflow.com/tags" term="pandas" />
+        <category scheme="https://stackoverflow.com/tags" term="csv" />
+        <category scheme="https://stackoverflow.com/tags" term="dictionary" />
+        <author>
+            <name>Murat Saglam</name>
+            <uri>https://stackoverflow.com/users/10580813</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69553768/converting-a-multi-dimensional-dictionary-which-contains-an-array-of-pandas-seri" />
+        <published>2021-10-13T10:20:52Z</published>
+        <updated>2021-10-13T11:30:21Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have some python code that create a dictionary where the key is followed with the value of a variable length array that contains pandas series.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;{&amp;quot;key1&amp;quot;:[series1,series2,series3], &amp;quot;key2&amp;quot;:[series4,series5,series6,..],...}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;All dataframes contains 2 columns, Word and frequency&lt;/p&gt;&#xA;&lt;p&gt;I was wondering what will be the most appropriate method to convert this data structure to a csv. In the following format.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;key, Word, frequency&#xA;key1, series1[0][0], series1[0][1]&#xA;key1, series1[1][0], series1[1][1]&#xA;......&#xA;key10, series76[100][0], series76[100][1]  #&amp;lt;-Arbitrary indexes. &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I have tried iterating through the dictionary and doing it like that. However remnants of the series gets saved to the CSV such as&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Length: 65, dtype: int64]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Therefore ideally I would like to use pandas.to_csv() in this scenario in order to not need to manually parse this data.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69553234</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to find out the bundle id for apns&#x27;s topic</title>
+        <category scheme="https://stackoverflow.com/tags" term="ios" />
+        <category scheme="https://stackoverflow.com/tags" term="certificate" />
+        <category scheme="https://stackoverflow.com/tags" term="apple-push-notifications" />
+        <author>
+            <name>ccd</name>
+            <uri>https://stackoverflow.com/users/9768260</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69553234/how-to-find-out-the-bundle-id-for-apnss-topic" />
+        <published>2021-10-13T09:47:46Z</published>
+        <updated>2021-10-13T11:29:28Z</updated>
+        <summary type="html">
+            &lt;p&gt;When i try to send message to apns server, it return the &lt;code&gt;DeviceTokenNotForTopic&lt;/code&gt; error message for me, how to find out the correct topic to fix it? (i also check the app bundle id but not work)&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69553044</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Sending messages to ActiveMQ Artemis not working with SSL enabled property</title>
+        <category scheme="https://stackoverflow.com/tags" term="java" />
+        <category scheme="https://stackoverflow.com/tags" term="activemq-artemis" />
+        <category scheme="https://stackoverflow.com/tags" term="artemis" />
+        <author>
+            <name>LDropl</name>
+            <uri>https://stackoverflow.com/users/7720801</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69553044/sending-messages-to-activemq-artemis-not-working-with-ssl-enabled-property" />
+        <published>2021-10-13T09:34:45Z</published>
+        <updated>2021-10-13T11:29:32Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have 3 pair master/slave Artemis HA cluster setup with replication. They are running on 6 different machines and each of them using their own self signed certificate where &lt;code&gt;CN&lt;/code&gt; matches the hostname where the brokers are running. It was new in artemis 2.18.0.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;broker.xml&lt;/code&gt; and &lt;code&gt;bootstrap.xml&lt;/code&gt; with sslEnabled settings looks like this:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-xml prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;?xml version=&#x27;1.0&#x27;?&amp;gt;&#xA;&amp;lt;configuration xmlns=&amp;quot;urn:activemq&amp;quot;&#xA;               xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&#xA;               xmlns:xi=&amp;quot;http://www.w3.org/2001/XInclude&amp;quot;&#xA;               xsi:schemaLocation=&amp;quot;urn:activemq /schema/artemis-configuration.xsd&amp;quot;&amp;gt;&#xA;&#xA;   &amp;lt;core xmlns=&amp;quot;urn:activemq:core&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&#xA;         xsi:schemaLocation=&amp;quot;urn:activemq:core &amp;quot;&amp;gt;&#xA;&#xA;      &amp;lt;name&amp;gt;amq1&amp;lt;/name&amp;gt;&#xA;      &amp;lt;persistence-enabled&amp;gt;true&amp;lt;/persistence-enabled&amp;gt;&#xA;      &amp;lt;journal-type&amp;gt;ASYNCIO&amp;lt;/journal-type&amp;gt;&#xA;      &amp;lt;paging-directory&amp;gt;data/paging&amp;lt;/paging-directory&amp;gt;&#xA;      &amp;lt;bindings-directory&amp;gt;data/bindings&amp;lt;/bindings-directory&amp;gt;&#xA;      &amp;lt;journal-directory&amp;gt;data/journal&amp;lt;/journal-directory&amp;gt;&#xA;      &amp;lt;large-messages-directory&amp;gt;data/large-messages&amp;lt;/large-messages-directory&amp;gt;&#xA;      &amp;lt;journal-datasync&amp;gt;true&amp;lt;/journal-datasync&amp;gt;&#xA;      &amp;lt;journal-min-files&amp;gt;2&amp;lt;/journal-min-files&amp;gt;&#xA;      &amp;lt;journal-pool-files&amp;gt;10&amp;lt;/journal-pool-files&amp;gt;&#xA;      &amp;lt;journal-device-block-size&amp;gt;4096&amp;lt;/journal-device-block-size&amp;gt;&#xA;      &amp;lt;journal-file-size&amp;gt;10M&amp;lt;/journal-file-size&amp;gt;&#xA;      &amp;lt;journal-buffer-timeout&amp;gt;28000&amp;lt;/journal-buffer-timeout&amp;gt;&#xA;      &amp;lt;journal-max-io&amp;gt;4096&amp;lt;/journal-max-io&amp;gt;&#xA;      &amp;lt;disk-scan-period&amp;gt;5000&amp;lt;/disk-scan-period&amp;gt;&#xA;      &amp;lt;max-disk-usage&amp;gt;100&amp;lt;/max-disk-usage&amp;gt;&#xA;      &amp;lt;critical-analyzer&amp;gt;true&amp;lt;/critical-analyzer&amp;gt;&#xA;      &amp;lt;critical-analyzer-timeout&amp;gt;150000&amp;lt;/critical-analyzer-timeout&amp;gt;&#xA;      &amp;lt;critical-analyzer-check-period&amp;gt;60000&amp;lt;/critical-analyzer-check-period&amp;gt;&#xA;      &amp;lt;critical-analyzer-policy&amp;gt;HALT&amp;lt;/critical-analyzer-policy&amp;gt;&#xA;      &amp;lt;page-sync-timeout&amp;gt;1628000&amp;lt;/page-sync-timeout&amp;gt;&#xA;      &amp;lt;global-max-size&amp;gt;204Mb&amp;lt;/global-max-size&amp;gt;&#xA;&#xA;      &amp;lt;connectors&amp;gt;&#xA;        &amp;lt;connector name=&amp;quot;amq1&amp;quot;&amp;gt;tcp://amq1:61616?sslEnabled=true;trustStorePath=/home/vagrant/artemis_certs/client_ts.p12;trustStorePassword=0etjq234NCTgBxP8dc4&amp;lt;/connector&amp;gt;&#xA;        &amp;lt;connector name=&amp;quot;amq2&amp;quot;&amp;gt;tcp://amq2:61616?sslEnabled=true;trustStorePath=/home/vagrant/artemis_certs/client_ts.p12;trustStorePassword=0etjq234NCTgBxP8dc4&amp;lt;/connector&amp;gt;&#xA;        &amp;lt;connector name=&amp;quot;amq33&amp;quot;&amp;gt;tcp://amq33:61616?sslEnabled=true;trustStorePath=/home/vagrant/artemis_certs/client_ts.p12;trustStorePassword=0etjq234NCTgBxP8dc4&amp;lt;/connector&amp;gt;&#xA;        &amp;lt;connector name=&amp;quot;amq44&amp;quot;&amp;gt;tcp://amq44:61616?sslEnabled=true;trustStorePath=/home/vagrant/artemis_certs/client_ts.p12;trustStorePassword=0etjq234NCTgBxP8dc4&amp;lt;/connector&amp;gt;&#xA;        &amp;lt;connector name=&amp;quot;amq5&amp;quot;&amp;gt;tcp://amq5:61616?sslEnabled=true;trustStorePath=/home/vagrant/artemis_certs/client_ts.p12;trustStorePassword=0etjq234NCTgBxP8dc4&amp;lt;/connector&amp;gt;&#xA;        &amp;lt;connector name=&amp;quot;amq6&amp;quot;&amp;gt;tcp://amq6:61616?sslEnabled=true;trustStorePath=/home/vagrant/artemis_certs/client_ts.p12;trustStorePassword=0etjq234NCTgBxP8dc4&amp;lt;/connector&amp;gt;&#xA;      &amp;lt;/connectors&amp;gt;&#xA;       &amp;lt;acceptors&amp;gt;&#xA;           &amp;lt;acceptor name=&amp;quot;artemis&amp;quot;&amp;gt;tcp://0.0.0.0:61616?tcpSendBufferSize=1048576;tcpReceiveBufferSize=1048576;amqpMinLargeMessageSize=102400;protocols=CORE,AMQP,STOMP,HORNETQ,MQTT,OPENWIRE;useEpoll=true;amqpCredits=1000;amqpLowCredits=300;amqpDuplicateDetection=true&amp;lt;/acceptor&amp;gt;&#xA;           &amp;lt;acceptor name=&amp;quot;amqp&amp;quot;&amp;gt;tcp://0.0.0.0:5672?tcpSendBufferSize=1048576;tcpReceiveBufferSize=1048576;protocols=AMQP;useEpoll=true;amqpCredits=1000;amqpLowCredits=300;amqpMinLargeMessageSize=102400;amqpDuplicateDetection=true&amp;lt;/acceptor&amp;gt;&#xA;           &amp;lt;acceptor name=&amp;quot;stomp&amp;quot;&amp;gt;tcp://0.0.0.0:61613?tcpSendBufferSize=1048576;tcpReceiveBufferSize=1048576;protocols=STOMP;useEpoll=true&amp;lt;/acceptor&amp;gt;&#xA;           &amp;lt;acceptor name=&amp;quot;hornetq&amp;quot;&amp;gt;tcp://0.0.0.0:5445?anycastPrefix=jms.queue.;multicastPrefix=jms.topic.;protocols=HORNETQ,STOMP;useEpoll=true&amp;lt;/acceptor&amp;gt;&#xA;           &amp;lt;acceptor name=&amp;quot;mqtt&amp;quot;&amp;gt;tcp://0.0.0.0:1883?tcpSendBufferSize=1048576;tcpReceiveBufferSize=1048576;protocols=MQTT;useEpoll=true&amp;lt;/acceptor&amp;gt;&#xA;       &amp;lt;/acceptors&amp;gt;&#xA;       &amp;lt;broadcast-groups&amp;gt;&#xA;           &amp;lt;broadcast-group name=&amp;quot;artemis-broadcast-group&amp;quot;&amp;gt;&#xA;               &amp;lt;group-address&amp;gt;231.7.7.7&amp;lt;/group-address&amp;gt;&#xA;               &amp;lt;group-port&amp;gt;9876&amp;lt;/group-port&amp;gt;&#xA;               &amp;lt;broadcast-period&amp;gt;2000&amp;lt;/broadcast-period&amp;gt;&#xA;               &amp;lt;connector-ref&amp;gt;amq1&amp;lt;/connector-ref&amp;gt;&#xA;           &amp;lt;/broadcast-group&amp;gt;&#xA;       &amp;lt;/broadcast-groups&amp;gt;&#xA;       &amp;lt;discovery-groups&amp;gt;&#xA;           &amp;lt;discovery-group name=&amp;quot;artemis-discovery-group&amp;quot;&amp;gt;&#xA;               &amp;lt;group-address&amp;gt;231.7.7.7&amp;lt;/group-address&amp;gt;&#xA;               &amp;lt;group-port&amp;gt;9876&amp;lt;/group-port&amp;gt;&#xA;               &amp;lt;refresh-timeout&amp;gt;10000&amp;lt;/refresh-timeout&amp;gt;&#xA;           &amp;lt;/discovery-group&amp;gt;&#xA;       &amp;lt;/discovery-groups&amp;gt;&#xA;      &amp;lt;cluster-user&amp;gt;admin&amp;lt;/cluster-user&amp;gt;&#xA;      &amp;lt;cluster-password&amp;gt;admin&amp;lt;/cluster-password&amp;gt;&#xA;      &amp;lt;cluster-connections&amp;gt;&#xA;         &amp;lt;cluster-connection name=&amp;quot;artemis-cluster&amp;quot;&amp;gt;&#xA;            &amp;lt;connector-ref&amp;gt;amq1&amp;lt;/connector-ref&amp;gt;&#xA;            &amp;lt;retry-interval&amp;gt;1000&amp;lt;/retry-interval&amp;gt;&#xA;            &amp;lt;retry-interval-multiplier&amp;gt;3&amp;lt;/retry-interval-multiplier&amp;gt;&#xA;            &amp;lt;max-retry-interval&amp;gt;5000&amp;lt;/max-retry-interval&amp;gt;&#xA;            &amp;lt;initial-connect-attempts&amp;gt;-1&amp;lt;/initial-connect-attempts&amp;gt;&#xA;            &amp;lt;reconnect-attempts&amp;gt;-1&amp;lt;/reconnect-attempts&amp;gt;&#xA;            &amp;lt;use-duplicate-detection&amp;gt;true&amp;lt;/use-duplicate-detection&amp;gt;&#xA;            &amp;lt;message-load-balancing&amp;gt;STRICT&amp;lt;/message-load-balancing&amp;gt;&#xA;            &amp;lt;max-hops&amp;gt;1&amp;lt;/max-hops&amp;gt;&#xA;             &amp;lt;discovery-group-ref discovery-group-name=&amp;quot;artemis-discovery-group&amp;quot;/&amp;gt;&#xA;         &amp;lt;/cluster-connection&amp;gt;&#xA;      &amp;lt;/cluster-connections&amp;gt;&#xA;&#xA;      &amp;lt;ha-policy&amp;gt;&#xA;        &amp;lt;replication&amp;gt;&#xA;          &amp;lt;master&amp;gt;&#xA;            &amp;lt;group-name&amp;gt;artemis-group-1&amp;lt;/group-name&amp;gt;&#xA;            &amp;lt;quorum-vote-wait&amp;gt;12&amp;lt;/quorum-vote-wait&amp;gt;&#xA;            &amp;lt;vote-on-replication-failure&amp;gt;true&amp;lt;/vote-on-replication-failure&amp;gt;&#xA;            &amp;lt;check-for-live-server&amp;gt;true&amp;lt;/check-for-live-server&amp;gt;&#xA;          &amp;lt;/master&amp;gt;&#xA;        &amp;lt;/replication&amp;gt;&#xA;      &amp;lt;/ha-policy&amp;gt;&#xA;&#xA;      &amp;lt;security-settings&amp;gt;&#xA;         &amp;lt;security-setting match=&amp;quot;#&amp;quot;&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;createNonDurableQueue&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;deleteNonDurableQueue&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;createDurableQueue&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;deleteDurableQueue&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;createAddress&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;deleteAddress&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;consume&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;browse&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;send&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;            &amp;lt;permission type=&amp;quot;manage&amp;quot; roles=&amp;quot;amq&amp;quot;/&amp;gt;&#xA;         &amp;lt;/security-setting&amp;gt;&#xA;      &amp;lt;/security-settings&amp;gt;&#xA;      &amp;lt;addresses&amp;gt;&#xA;         &amp;lt;address name=&amp;quot;exampleQueue&amp;quot;&amp;gt;&#xA;            &amp;lt;anycast&amp;gt;&#xA;               &amp;lt;queue name=&amp;quot;exampleQueue&amp;quot;/&amp;gt;&#xA;            &amp;lt;/anycast&amp;gt;&#xA;         &amp;lt;/address&amp;gt;&#xA;         &amp;lt;address name=&amp;quot;DLQ&amp;quot;&amp;gt;&#xA;         &amp;lt;/address&amp;gt;&#xA;         &amp;lt;address name=&amp;quot;ExpiryQueue&amp;quot;&amp;gt;&#xA;            &amp;lt;anycast&amp;gt;&#xA;               &amp;lt;queue name=&amp;quot;ExpiryQueue&amp;quot; /&amp;gt;&#xA;            &amp;lt;/anycast&amp;gt;&#xA;         &amp;lt;/address&amp;gt;&#xA;      &amp;lt;/addresses&amp;gt;&#xA;      &amp;lt;address-settings&amp;gt;&#xA;         &amp;lt;!-- if you define auto-create on certain queues, management has to be auto-create --&amp;gt;&#xA;         &amp;lt;address-setting match=&amp;quot;activemq.management#&amp;quot;&amp;gt;&#xA;            &amp;lt;dead-letter-address&amp;gt;DLQ&amp;lt;/dead-letter-address&amp;gt;&#xA;            &amp;lt;expiry-address&amp;gt;ExpiryQueue&amp;lt;/expiry-address&amp;gt;&#xA;            &amp;lt;redelivery-delay&amp;gt;0&amp;lt;/redelivery-delay&amp;gt;&#xA;            &amp;lt;!-- with -1 only the global-max-size is in use for limiting --&amp;gt;&#xA;            &amp;lt;max-size-bytes&amp;gt;-1&amp;lt;/max-size-bytes&amp;gt;&#xA;            &amp;lt;message-counter-history-day-limit&amp;gt;10&amp;lt;/message-counter-history-day-limit&amp;gt;&#xA;            &amp;lt;address-full-policy&amp;gt;PAGE&amp;lt;/address-full-policy&amp;gt;&#xA;            &amp;lt;auto-create-queues&amp;gt;true&amp;lt;/auto-create-queues&amp;gt;&#xA;            &amp;lt;auto-create-addresses&amp;gt;true&amp;lt;/auto-create-addresses&amp;gt;&#xA;            &amp;lt;auto-create-jms-queues&amp;gt;true&amp;lt;/auto-create-jms-queues&amp;gt;&#xA;            &amp;lt;auto-create-jms-topics&amp;gt;true&amp;lt;/auto-create-jms-topics&amp;gt;&#xA;         &amp;lt;/address-setting&amp;gt;&#xA;         &amp;lt;!--default for catch all--&amp;gt;&#xA;         &amp;lt;address-setting match=&amp;quot;#&amp;quot;&amp;gt;&#xA;            &amp;lt;dead-letter-address&amp;gt;DLQ&amp;lt;/dead-letter-address&amp;gt;&#xA;            &amp;lt;expiry-address&amp;gt;ExpiryQueue&amp;lt;/expiry-address&amp;gt;&#xA;            &amp;lt;redelivery-delay&amp;gt;0&amp;lt;/redelivery-delay&amp;gt;&#xA;            &amp;lt;auto-create-dead-letter-resources&amp;gt;true&amp;lt;/auto-create-dead-letter-resources&amp;gt;&#xA;            &amp;lt;!-- with -1 only the global-max-size is in use for limiting --&amp;gt;&#xA;            &amp;lt;max-size-bytes&amp;gt;-1&amp;lt;/max-size-bytes&amp;gt;&#xA;            &amp;lt;message-counter-history-day-limit&amp;gt;10&amp;lt;/message-counter-history-day-limit&amp;gt;&#xA;            &amp;lt;address-full-policy&amp;gt;PAGE&amp;lt;/address-full-policy&amp;gt;&#xA;            &amp;lt;auto-create-queues&amp;gt;true&amp;lt;/auto-create-queues&amp;gt;&#xA;            &amp;lt;auto-create-addresses&amp;gt;true&amp;lt;/auto-create-addresses&amp;gt;&#xA;            &amp;lt;auto-create-jms-queues&amp;gt;true&amp;lt;/auto-create-jms-queues&amp;gt;&#xA;            &amp;lt;auto-create-jms-topics&amp;gt;true&amp;lt;/auto-create-jms-topics&amp;gt;&#xA;         &amp;lt;/address-setting&amp;gt;&#xA;         &amp;lt;address-setting match=&amp;quot;exampleQueue&amp;quot;&amp;gt;            &#xA;            &amp;lt;dead-letter-address&amp;gt;DLQ&amp;lt;/dead-letter-address&amp;gt;                      &#xA;            &amp;lt;redelivery-delay&amp;gt;1000&amp;lt;/redelivery-delay&amp;gt;    &#xA;            &amp;lt;max-delivery-attempts&amp;gt;3&amp;lt;/max-delivery-attempts&amp;gt;&#xA;            &amp;lt;max-size-bytes&amp;gt;-1&amp;lt;/max-size-bytes&amp;gt;&#xA;            &amp;lt;page-size-bytes&amp;gt;1048576&amp;lt;/page-size-bytes&amp;gt;&#xA;            &amp;lt;message-counter-history-day-limit&amp;gt;10&amp;lt;/message-counter-history-day-limit&amp;gt;&#xA;            &amp;lt;address-full-policy&amp;gt;PAGE&amp;lt;/address-full-policy&amp;gt;&#xA;        &amp;lt;/address-setting&amp;gt;&#xA;      &amp;lt;/address-settings&amp;gt;&#xA;   &amp;lt;/core&amp;gt;&#xA;&amp;lt;/configuration&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;bootstrap.xml&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-xml prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;yes&amp;quot;?&amp;gt;&#xA;&amp;lt;broker xmlns=&amp;quot;http://activemq.org/schema&amp;quot;&amp;gt;&#xA;&#xA;   &amp;lt;jaas-security domain=&amp;quot;activemq&amp;quot;/&amp;gt;&#xA;&#xA;   &amp;lt;server configuration=&amp;quot;file:/home/vagrant/artemis-broker/etc//broker.xml&amp;quot;/&amp;gt;&#xA;   &amp;lt;web bind=&amp;quot;https://0.0.0.0:8161&amp;quot; path=&amp;quot;web&amp;quot; keyStorePath=&amp;quot;/home/vagrant/artemis_certs/broker_ks.p12&amp;quot; keyStorePassword=&amp;quot;Hf316S2m34234VPuhmv9x&amp;quot; trustStorePath=&amp;quot;/home/vagrant/artemis_certs/client_ts.p12&amp;quot; trustStorePassword=&amp;quot;0etjq234NCTgBxP8dc4&amp;quot;&amp;gt;&#xA;      &amp;lt;app url=&amp;quot;activemq-branding&amp;quot; war=&amp;quot;activemq-branding.war&amp;quot;/&amp;gt;&#xA;      &amp;lt;app url=&amp;quot;artemis-plugin&amp;quot; war=&amp;quot;artemis-plugin.war&amp;quot;/&amp;gt;&#xA;      &amp;lt;app url=&amp;quot;console&amp;quot; war=&amp;quot;console.war&amp;quot;/&amp;gt;&#xA;   &amp;lt;/web&amp;gt;&#xA;&amp;lt;/broker&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Now I&#x27;m trying to send messages to the queue from one client machine which is using also the certificate from one of the artemis broker client.&lt;/p&gt;&#xA;&lt;p&gt;I configured brokerURL with list of all 6 artemis brokers and sslEnabled property but it doesn&#x27;t not work when I&#x27;m trying to execute it.&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-java prettyprint-override&quot;&gt;&lt;code&gt;    @Bean&#xA;    public ActiveMQConnectionFactory jmsFactory() {&#xA;        ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(&#xA;                &amp;quot;(tcp://amq1:61616,tcp://amq2:61616,tcp://amq33:61616,tcp://amq44:61616,tcp://amq5:61616,tcp://amq6:61616)?ha=true&amp;amp;sslEnabled=true&amp;amp;trustStorePath=/home/vagrant/artemis_certs/client_ts.p12&amp;amp;trustStorePassword=password&amp;quot;);&#xA;        factory.setRetryInterval(1000);&#xA;        factory.setRetryIntervalMultiplier(1.0);&#xA;        factory.setReconnectAttempts(-1);&#xA;        factory.setConfirmationWindowSize(10);&#xA;        return factory;&#xA;    }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;If I use only property &lt;code&gt;verifyHost=false&lt;/code&gt; in broker url then it works fine. the URL looks like this:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-xml prettyprint-override&quot;&gt;&lt;code&gt;(tcp://amq1:61616,tcp://amq2:61616,tcp://amq33:61616,tcp://amq44:61616,tcp://amq5:61616,tcp://amq6:61616)?ha=true&amp;amp;verifyHost=false&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I would like to make it work also with sslEnabled property but getting this error:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Started SpringJmsProducerApplication in 1.476 seconds (JVM running for 1.867)&#xA;Sending message 0 @ 2021-10-13 09:32:02.379&#xA;2021-10-13 09:32:13.236 ERROR 13894 --- [           main] org.apache.activemq.artemis.core.client  : AMQ214016: Failed to create netty connection&#xA;&#xA;javax.net.ssl.SSLException: handshake timed out&#xA;        at io.netty.handler.ssl.SslHandler$5.run(SslHandler.java:2003) ~[netty-handler-4.1.39.Final.jar!/:4.1.39.Final]&#xA;        at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.39.Final.jar!/:4.1.39.Final]&#xA;        at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.39.Final.jar!/:4.1.39.Final]&#xA;        at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.39.Final.jar!/:4.1.39.Final]&#xA;        at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:416) ~[netty-common-4.1.39.Final.jar!/:4.1.39.Final]&#xA;        at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:331) ~[netty-transport-native-epoll-4.1.39.Final-linux-x86_64.jar!/:4.1.39.Final]&#xA;        at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.39.Final.jar!/:4.1.39.Final]&#xA;        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.39.Final.jar!/:4.1.39.Final]&#xA;        at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118) ~[artemis-commons-2.6.4.jar!/:2.6.4]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I added acceptor with sslEnabled in broker.xml file&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-xml prettyprint-override&quot;&gt;&lt;code&gt;      &amp;lt;acceptors&amp;gt;&#xA;        &amp;lt;acceptor name=&amp;quot;netty-acceptor&amp;quot;&amp;gt;tcp://amq1:61616?sslEnabled=true;keyStorePath=/home/vagrant/artemis_certs/broker_ks.p12;keyStorePassword=password&amp;lt;/acceptor&amp;gt;&#xA;      &amp;lt;/acceptors&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;but now I&#x27;m getting this error:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Sending message 0 @ 2021-10-13 11:23:50.816&#xA;Failed: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Failed to create session factory; nested exception is ActiveMQNotConnectedException[errorType=NOT_CONNECTED message=AMQ219007: Cannot connect to server(s). Tried with all available servers.]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69551970</id>
+        <re:rank scheme="https://stackoverflow.com">3</re:rank>
+        <title type="text">Shouldn&#x27;t Typescript pick the most specific function implementation?</title>
+        <category scheme="https://stackoverflow.com/tags" term="typescript" />
+        <author>
+            <name>Adam Baranyai</name>
+            <uri>https://stackoverflow.com/users/2691879</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69551970/shouldnt-typescript-pick-the-most-specific-function-implementation" />
+        <published>2021-10-13T08:15:50Z</published>
+        <updated>2021-10-13T11:29:25Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have the following code:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&#xA;type allPossibileTypes = &#x27;my-first-type&#x27; | &#x27;my-second-type&#x27; | &#x27;my-third-type&#x27;;&#xA;type genericFunction = (innerVariable: any) =&amp;gt; void;&#xA;&#xA;class A {&#xA;   doSomethingWith(inputType: &#x27;my-first-type&#x27;, callback: (innerVariable: string) =&amp;gt; void);&#xA;   doSomethingWith(inputType: allPossibileTypes, callback: genericFunction);&#xA;   doSomethingWith(inputType: string, callback: any) {&#xA;      // function logic here&#xA;   }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;If I try to call the function like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;AInstance.doSomething(&#x27;my-first-type&#x27;, ...);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I expect that typescript will hint me to the &lt;code&gt;(innerVariable: string) =&amp;gt; void&lt;/code&gt; for the second parameter, yet instead, it hints me to the &lt;code&gt;genericFunction&lt;/code&gt; type. Until now, I thought that when picking type hints, typescript will choose the most specific implementation that it can use, am I mistaken in this?&lt;/p&gt;&#xA;&lt;p&gt;If yes, how could I achieve to define a function, which allows me to use as the first parameter, only specific strings, and on some concrete occasions, based on the first parameter, give me additional type hints?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69551893</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Can you simulate clicking enter from Batch file?</title>
+        <category scheme="https://stackoverflow.com/tags" term="batch-file" />
+        <category scheme="https://stackoverflow.com/tags" term="command-window" />
+        <author>
+            <name>eacuna</name>
+            <uri>https://stackoverflow.com/users/17140878</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69551893/can-you-simulate-clicking-enter-from-batch-file" />
+        <published>2021-10-13T08:09:54Z</published>
+        <updated>2021-10-13T11:30:31Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am writing a short batch file, that I will run from the command window, that goes through all the subfolders that start with a sequence (&amp;quot;01&amp;quot; in my case) and runs a .exe file located in each folder.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;@echo off&#xA;CD &amp;quot;C:\Users\Acuna\Desktop\simulations&amp;quot;&#xA;for /D /r %%d in (&amp;quot;01*&amp;quot;) do (&#xA;  pushd &amp;quot;%%d&amp;quot;&#xA;  start &amp;quot;&amp;quot; /wait hydro_2dm.exe&#xA;  popd&#xA;)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;The problem I am having is that when I run the .exe file (which runs well with the code) in the last line it asks me to press enter to continue and exit the process, and I have not been able to emulate this from a batch file. I search in several forums and they recommend this line when calling the .exe&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;echo yes | call hydro_2dm.exe&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;but it didn&#x27;t work. Does anyone have a suggestion on how to solve that problem?&lt;/p&gt;&#xA;&lt;p&gt;Thank you in advance!&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69548301</id>
+        <re:rank scheme="https://stackoverflow.com">-3</re:rank>
+        <title type="text">Python Opencv implementation of Tensor Voting: perceptual grouping [closed]</title>
+        <category scheme="https://stackoverflow.com/tags" term="python" />
+        <category scheme="https://stackoverflow.com/tags" term="opencv" />
+        <category scheme="https://stackoverflow.com/tags" term="image-processing" />
+        <category scheme="https://stackoverflow.com/tags" term="tensor" />
+        <author>
+            <name>Userulli</name>
+            <uri>https://stackoverflow.com/users/11389220</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69548301/python-opencv-implementation-of-tensor-voting-perceptual-grouping" />
+        <published>2021-10-13T00:17:16Z</published>
+        <updated>2021-10-13T11:30:31Z</updated>
+        <summary type="html">
+            &lt;p&gt;Is in OpenCv implemented a function for Tensor Voting? &lt;br&gt;&#xA;&lt;a href=&quot;https://it.mathworks.com/matlabcentral/fileexchange/47398-tensor-voting-with-steerable-filters&quot; rel=&quot;nofollow noreferrer&quot;&gt;Here&lt;/a&gt; I found a partial implementation for MatLab. There is something similar in Python?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69539051</id>
+        <re:rank scheme="https://stackoverflow.com">-4</re:rank>
+        <title type="text">Repeat the c program according to user</title>
+        <category scheme="https://stackoverflow.com/tags" term="c" />
+        <author>
+            <name>how is this</name>
+            <uri>https://stackoverflow.com/users/17133807</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69539051/repeat-the-c-program-according-to-user" />
+        <published>2021-10-12T10:35:22Z</published>
+        <updated>2021-10-13T11:29:23Z</updated>
+        <summary type="html">
+            &lt;p&gt;I want this program to repeat every time when users wish to continue&#xA;. I want user to choose yes to continue the program using other options but it&#x27;s not executable.I used &#x27;if else&#x27; statement for that but i am not getting any applicable or satisfying results plz help me on this matter.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;&#xA;int main() {&#xA;float a, b;&#xA;int p;&#xA;char q;&#xA;printf(&amp;quot;Enter the first number:&amp;quot; );&#xA;scanf(&amp;quot;%f&amp;quot;, &amp;amp;a);&#xA;printf(&amp;quot;Enter the second number:&amp;quot;);&#xA;scanf(&amp;quot;%f&amp;quot;, &amp;amp;b);&#xA;printf(&amp;quot;Choose the option:\n1.Sum\n \n2.Subtraction\n \n3.Multiplication\n \n4.Divison\n \nyour choice=&amp;quot;);&#xA; scanf(&amp;quot;%d&amp;quot;, &amp;amp; p);&#xA;switch(p)&#xA;{&#xA;case 1:&#xA;printf(&amp;quot;The sum of above numbers is: %f&amp;quot;, a&#x2B;b);&#xA;break;&#xA;case 2:&#xA;printf(&amp;quot;The subtraction of above numbers is:%f&amp;quot;, a-b);&#xA;break;&#xA;case 3:&#xA;printf(&amp;quot;The multiplication of above numbers is:%f&amp;quot;, a*b);&#xA;break;&#xA;case 4:&#xA;printf(&amp;quot;The division of above numbers is:%f&amp;quot;, a/b);&#xA;break;&#xA;}&#xA;printf(&amp;quot;\n\nDo u want to continue:(y for yes and n for no) :&amp;quot;);&#xA;scanf(&amp;quot;%c&amp;quot;, &amp;amp; q);&#xA;if(q==&#x27;y&#x27;)&#xA;return main();&#xA;else&#xA;return 0;&#xA;} &#xA;    &#xA;&#xA;  &#xA;    &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69499206</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to send a message from Helix controller to participant?</title>
+        <category scheme="https://stackoverflow.com/tags" term="helix" />
+        <author>
+            <name>Jaraws</name>
+            <uri>https://stackoverflow.com/users/9294422</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69499206/how-to-send-a-message-from-helix-controller-to-participant" />
+        <published>2021-10-08T16:43:36Z</published>
+        <updated>2021-10-13T11:29:36Z</updated>
+        <summary type="html">
+            &lt;p&gt;I want to send a message to all Participant nodes of my Helix cluster from Controller node. I tried following piece of code to send message to all registered participants of my cluster but their registered Participant message listeners are not receiving the message notification from Helix.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Message msg = new Message(factory.getMessageTypes().get(0), msgId);&#xA;msg.setMsgId(msgId);&#xA;msg.setSrcName(hostSrc);&#xA;msg.setTgtSessionId(&amp;quot;*&amp;quot;);&#xA;msg.setMsgState(MessageState.NEW);&#xA;msg.getRecord().setSimpleField(&amp;quot;TestMessage&amp;quot;, &amp;quot;Message from controller&amp;quot;);&#xA;&#xA;Criteria recipientCriteria = new Criteria();&#xA;recipientCriteria.setRecipientInstanceType(InstanceType.PARTICIPANT);&#xA;recipientCriteria.setInstanceName(&amp;quot;%&amp;quot;); // To all recipients &#xA;recipientCriteria.setSessionSpecific(true);    // To deliver only live participants&#xA;recipientCriteria.setSessionSpecific(&amp;quot;DEV_CLUSTER&amp;quot;); // To only participants of this cluster&#xA;&#xA;messagingService.send(recipientCriteria,msg);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Note that, when I am sending this message there is no resource exists in the cluster.&lt;/p&gt;&#xA;&lt;p&gt;After debugging further what I have observed is CriteriaEvaluator.evaluateCriteria(....) operation is returning an empty list which further results into 0 messages to be sent to Participants nodes.&lt;/p&gt;&#xA;&lt;p&gt;Kindly let me know if I am missing anything here while defining my criteria for Participants.&lt;/p&gt;&#xA;&lt;p&gt;Thanks !&lt;/p&gt;&#xA;&lt;p&gt;Update-1: our observation on this issue is as follows:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;p&gt;The received message at the participant side is read by both the Participant message listener(Say L1) and the handler created through MessageHandlerFactory(Which internally creating a listener HelixtaskExecutor (Say L2)).&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;p&gt;In case if the message is read by HelixTaskExecutor(L2) first, it then immediately deletes the Znode in Zookeeper and the additionally configured message listener(L1) doesn&#x27;t receive this message.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;p&gt;In case if the message is first read my additional message listener i.e. L1 then in such scenarios we don&#x27;t face this problem as this additionally added listener doesn&#x27;t delete the Znode from ZooKeeper.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;We are still not sure how can we handle this problem as we want to use both the listener and MessageHandlers but facing the same problem I stated above.&lt;/p&gt;&#xA;&lt;p&gt;Any inputs are appreciated.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/69497388</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">APDU Command help 80 72</title>
+        <category scheme="https://stackoverflow.com/tags" term="apdu" />
+        <author>
+            <name>Benahmed Hadj Kouider</name>
+            <uri>https://stackoverflow.com/users/8966036</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/69497388/apdu-command-help-80-72" />
+        <published>2021-10-08T14:20:46Z</published>
+        <updated>2021-10-13T11:30:23Z</updated>
+        <summary type="html">
+            &lt;p&gt;80 72 00 00 08 00 00 00 00 11 72 76 11&#xA;80 76 00 9F 08 16 08 45 44 A4 5A F6 5C&#xA;80 74 00 9F 08 6E C3 1A C8 B3 A9 4C 6C&lt;/p&gt;&#xA;&lt;p&gt;what does this command do?&#xA;ISO 7816-4 8.1.2&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/66756808</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Flutter Searchdelegate, i want to add background color and appbar color when i click the search</title>
+        <category scheme="https://stackoverflow.com/tags" term="flutter" />
+        <author>
+            <name>Wonderweis</name>
+            <uri>https://stackoverflow.com/users/15359893</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/66756808/flutter-searchdelegate-i-want-to-add-background-color-and-appbar-color-when-i-c" />
+        <published>2021-03-23T03:19:13Z</published>
+        <updated>2021-10-13T11:29:53Z</updated>
+        <summary type="html">
+            &lt;p&gt;i can change my background color and app bar in home just fine, but when i click the search icon which uses search delegate it all back to white, how do i change the color? just to make it clear, so before the user clicked the search icon the background and app bar was black but when they clicked it it turned to white, how do i change it?&lt;/p&gt;&#xA;&lt;p&gt;here is the search code :&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;import &#x27;package:flutter/material.dart&#x27;;&#xA;import &#x27;package:movie_app_3/model/movie_response.dart&#x27;;&#xA;import &#x27;package:movie_app_3/screens/movie_detail_screen/movie_detail_screen.dart&#x27;;&#xA;&#xA;import &#x27;../model/movie.dart&#x27;;&#xA;import &#x27;../repository/repository.dart&#x27;;&#xA;&#xA;class DataSearch extends SearchDelegate {&#xA;  // void initState() {&#xA;  //   searchBloc..getSearch(query);&#xA;  // }&#xA;  final movieRepo = MovieRepository();&#xA;  @override&#xA;  List&amp;lt;Widget&amp;gt; buildActions(BuildContext context) {&#xA;    return [&#xA;      IconButton(&#xA;        icon: Icon(Icons.clear),&#xA;        onPressed: () =&amp;gt; query = &#x27;&#x27;,&#xA;      )&#xA;    ];&#xA;  }&#xA;&#xA;  @override&#xA;  Widget buildLeading(BuildContext context) {&#xA;    return IconButton(&#xA;      icon: AnimatedIcon(&#xA;          icon: AnimatedIcons.menu_arrow, progress: transitionAnimation),&#xA;      onPressed: () =&amp;gt; close(context, null),&#xA;    );&#xA;  }&#xA;&#xA;  @override&#xA;  Widget buildResults(BuildContext context) {&#xA;    return Container();&#xA;  }&#xA;&#xA;  @override&#xA;  Widget buildSuggestions(BuildContext context) {&#xA;    if (query.isEmpty) return Container();&#xA;&#xA;    return FutureBuilder&amp;lt;MovieResponse&amp;gt;(&#xA;      future: movieRepo.getSearch(query),&#xA;      builder: (BuildContext context, AsyncSnapshot&amp;lt;MovieResponse&amp;gt; snapshot) {&#xA;        if (snapshot.hasData) {&#xA;          if (snapshot.data.error != null &amp;amp;&amp;amp; snapshot.data.error.length &amp;gt; 0) {&#xA;            return _buildErrorWidget(snapshot.data.error);&#xA;          }&#xA;          return _buildHomeWidget(snapshot.data);&#xA;        } else if (snapshot.hasError) {&#xA;          return _buildErrorWidget(snapshot.error);&#xA;        } else {&#xA;          return _buildLoadingWidget();&#xA;        }&#xA;      },&#xA;    );&#xA;  }&#xA;&#xA;  Widget _buildHomeWidget(MovieResponse data) {&#xA;    List&amp;lt;Movie&amp;gt; movies = data.movies;&#xA;    return ListView.builder(&#xA;      itemCount: movies.length,&#xA;      itemBuilder: (context, index) {&#xA;        return ListTile(&#xA;          leading: FadeInImage(&#xA;              image: movies[index].poster == null&#xA;                  ? AssetImage(&#x27;assets/images/no-image.jpg&#x27;)&#xA;                  : NetworkImage(&amp;quot;https://image.tmdb.org/t/p/w200/&amp;quot; &#x2B;&#xA;                      movies[index].poster),&#xA;              placeholder: AssetImage(&#x27;assets/images/no-image.jpg&#x27;),&#xA;              width: 50.0,&#xA;              fit: BoxFit.contain),&#xA;          title: Text(&#xA;            movies[index].title,&#xA;            style: TextStyle(fontFamily: &#x27;Poppins&#x27;),&#xA;          ),&#xA;          subtitle: Text(&#xA;            movies[index].overview,&#xA;            overflow: TextOverflow.ellipsis,&#xA;            style: TextStyle(fontFamily: &#x27;Raleway&#x27;),&#xA;          ),&#xA;          onTap: () {&#xA;            Navigator.push(&#xA;              context,&#xA;              MaterialPageRoute(&#xA;                builder: (context) =&amp;gt; MovieDetailScreen(movie: movies[index]),&#xA;              ),&#xA;            );&#xA;          },&#xA;        );&#xA;      },&#xA;    );&#xA;  }&#xA;&#xA;  Widget _buildLoadingWidget() {&#xA;    return Center(&#xA;        child: Column(&#xA;      mainAxisAlignment: MainAxisAlignment.center,&#xA;      children: [&#xA;        SizedBox(&#xA;          height: 25.0,&#xA;          width: 25.0,&#xA;          child: CircularProgressIndicator(&#xA;            valueColor: new AlwaysStoppedAnimation&amp;lt;Color&amp;gt;(Colors.black),&#xA;            strokeWidth: 4.0,&#xA;          ),&#xA;        )&#xA;      ],&#xA;    ));&#xA;  }&#xA;&#xA;  Widget _buildErrorWidget(String error) {&#xA;    return Center(&#xA;        child: Column(&#xA;      mainAxisAlignment: MainAxisAlignment.center,&#xA;      children: [&#xA;        Text(&amp;quot;Error occured: $error&amp;quot;),&#xA;      ],&#xA;    ));&#xA;  }&#xA;  // @override&#xA;  // Widget buildSuggestions(BuildContext context) {&#xA;  //   final suggestedList = (query.isEmpty) ?&#xA;  //                         recentMovies :&#xA;  //                         movies.where((movie) =&amp;gt; movie.toLowerCase().contains(query.toLowerCase())).toList();&#xA;&#xA;  //   return ListView.builder(&#xA;  //     itemCount: suggestedList.length,&#xA;  //     itemBuilder: (context, i) {&#xA;  //       return ListTile(&#xA;  //         leading: Icon(Icons.movie),&#xA;  //         title: Text(suggestedList[i]),&#xA;  //         onTap: () {},&#xA;  //       );&#xA;  //     },&#xA;  //   );&#xA;  // }&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;here is the home code :&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;import &#x27;package:flutter/material.dart&#x27;;&#xA;&#xA;import &#x27;package:movie_app_3/widget/drawer.dart&#x27;;&#xA;import &#x27;package:movie_app_3/screens/home_screen/widget/home_screen1.dart&#x27;;&#xA;import &#x27;package:movie_app_3/screens/home_screen/widget/home_screen2.dart&#x27;;&#xA;import &#x27;package:movie_app_3/widget/search.dart&#x27;;&#xA;&#xA;class HomeScreen extends StatefulWidget {&#xA;  @override&#xA;  _HomeScreenState createState() =&amp;gt; _HomeScreenState();&#xA;}&#xA;&#xA;class _HomeScreenState extends State&amp;lt;HomeScreen&amp;gt;&#xA;    with SingleTickerProviderStateMixin {&#xA;  TabController _tabController;&#xA;  @override&#xA;  void initState() {&#xA;    super.initState();&#xA;    _tabController = TabController(vsync: this, length: 2);&#xA;  }&#xA;&#xA;  @override&#xA;  void dispose() {&#xA;    _tabController.dispose();&#xA;    super.dispose();&#xA;  }&#xA;&#xA;  @override&#xA;  Widget build(BuildContext context) {&#xA;    return Container(&#xA;      decoration: BoxDecoration(&#xA;        gradient: LinearGradient(&#xA;          begin: Alignment.topCenter,&#xA;          end: Alignment.bottomCenter,&#xA;          colors: [&#xA;            Colors.black,&#xA;            Color(0xff112339),&#xA;            Colors.black,&#xA;          ],&#xA;        ),&#xA;      ),&#xA;      child: DefaultTabController(&#xA;        length: 2,&#xA;        child: Scaffold(&#xA;          backgroundColor: Colors.transparent,&#xA;          appBar: AppBar(&#xA;            elevation: 0,&#xA;            title: Text(&#xA;              &#x27;Moviez&#x27;,&#xA;              style: TextStyle(&#xA;                fontSize: 24,&#xA;                color: Colors.white,&#xA;                fontFamily: &#x27;Poppins&#x27;,&#xA;              ),&#xA;            ),&#xA;            backgroundColor: Colors.transparent,&#xA;            centerTitle: true,&#xA;            actions: [&#xA;              Padding(&#xA;                padding: EdgeInsets.only(right: 20),&#xA;                child: IconButton(&#xA;                  icon: Icon(Icons.search),&#xA;                  onPressed: () {&#xA;                    showSearch(context: context, delegate: DataSearch());&#xA;                  },&#xA;                ),&#xA;              ),&#xA;            ],&#xA;            bottom: TabBar(&#xA;              controller: _tabController,&#xA;              indicatorColor: Colors.white,&#xA;              indicatorSize: TabBarIndicatorSize.tab,&#xA;              indicatorWeight: 2.0,&#xA;              tabs: [&#xA;                Padding(&#xA;                  padding: const EdgeInsets.symmetric(vertical: 8.0),&#xA;                  child: Text(&#xA;                    &#x27;Discover&#x27;,&#xA;                    style: TextStyle(fontSize: 16, fontFamily: &#x27;Raleway&#x27;),&#xA;                  ),&#xA;                ),&#xA;                Padding(&#xA;                  padding: const EdgeInsets.symmetric(vertical: 8.0),&#xA;                  child: Text(&#xA;                    &#x27;Genres&#x27;,&#xA;                    style: TextStyle(fontSize: 16, fontFamily: &#x27;Raleway&#x27;),&#xA;                  ),&#xA;                ),&#xA;              ],&#xA;            ),&#xA;          ),&#xA;          drawer: MyDrawer(),&#xA;          body: TabBarView(&#xA;            controller: _tabController,&#xA;            children: &amp;lt;Widget&amp;gt;[&#xA;              FirstTab(),&#xA;              SecondTab(),&#xA;            ],&#xA;          ),&#xA;        ),&#xA;      ),&#xA;    );&#xA;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/66281313</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Com.Theartofdev.Edmodo.Cropper library result code cancelled</title>
+        <category scheme="https://stackoverflow.com/tags" term="c#" />
+        <category scheme="https://stackoverflow.com/tags" term="xamarin" />
+        <category scheme="https://stackoverflow.com/tags" term="xamarin.android" />
+        <author>
+            <name>psy</name>
+            <uri>https://stackoverflow.com/users/12419095</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/66281313/com-theartofdev-edmodo-cropper-library-result-code-cancelled" />
+        <published>2021-02-19T16:23:39Z</published>
+        <updated>2021-10-13T11:29:45Z</updated>
+        <summary type="html">
+            &lt;p&gt;I could not get the result code &amp;quot;OK&amp;quot; OnActivityResult using Com.Theartofdev.Edmodo.Cropper library. It was resulting cancelled even though I am actually pressing the crop from it, Since the library will automatically display the tool for cropping. using this code,. It will let you to pick image from your device and when i am pressing the crop nothing happens and found out the resultcode is cancelled.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;CropImage.Builder()&#xA;                  .SetGuidelines(CropImageView.Guidelines.On).SetCropShape(CropImageView.CropShape.Oval).SetFixAspectRatio(true)&#xA;                  .Start(this);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;a href=&quot;https://i.stack.imgur.com/xBOag.png&quot; rel=&quot;nofollow noreferrer&quot;&gt;&lt;img src=&quot;https://i.stack.imgur.com/xBOag.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/a&gt;&#xA;(Image not mine, came from here &amp;quot;https://bintray.com/arthurhub/maven/Android-Image-Cropper#&amp;quot;)&lt;/p&gt;&#xA;&lt;p&gt;My goal is to get the uri from the OnActivityResult and display it on a cropimageview.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt; CropImageView cropImageView;&#xA;        protected override void OnCreate(Bundle savedInstanceState)&#xA;        {&#xA;            &#xA;&#xA;&#xA;            base.OnCreate(savedInstanceState);&#xA;            SetContentView(Resource.Layout.cropView);&#xA;&#xA;            cropImageView = (CropImageView)FindViewById(Resource.Id.cropImageView);&#xA;&#xA;        &#xA;            CropImage.Builder()&#xA;              .SetGuidelines(CropImageView.Guidelines.On).SetCropShape(CropImageView.CropShape.Oval).SetFixAspectRatio(true)&#xA;              .Start(this);&#xA;&#xA;             StartActivityForResult(Intent, 200);&#xA;&#xA;&#xA;        }&#xA;&#xA;&#xA;&#xA;&#xA;        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)&#xA;        {&#xA;&#xA;            if (requestCode == CropImage.PickImageChooserRequestCode)&#xA;            {&#xA;                try&#xA;                {&#xA;   &#xA;                    CropImage.ActivityResult result = CropImage.GetActivityResult(data);&#xA;                    if (resultCode == Result.Ok)&#xA;                    {&#xA;&#xA;                        Android.Net.Uri resultUri = result.Uri;&#xA;                        cropImageView.SetImageUriAsync(resultUri);&#xA;                    }&#xA;                }&#xA;                catch&#xA;                {&#xA;                    Toast.MakeText(Application.Context, &amp;quot;Error&amp;quot;, ToastLength.Long).Show();&#xA;                }&#xA;&#xA;&#xA;            }&#xA;        }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;It says that on the documentation just use the OnActivityResult to get the cropped image from the tool but I could not make the result code to be &amp;quot;Ok&amp;quot;. I really guess I&#x27;m doing it wrong or I am missing lots of parts of it.&lt;/p&gt;&#xA;&lt;p&gt;Regards,&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/54964599</id>
+        <re:rank scheme="https://stackoverflow.com">3</re:rank>
+        <title type="text">How to solve ListView.builder bottom overflow issue?</title>
+        <category scheme="https://stackoverflow.com/tags" term="flutter" />
+        <category scheme="https://stackoverflow.com/tags" term="flutter-layout" />
+        <author>
+            <name>xorrior</name>
+            <uri>https://stackoverflow.com/users/3617065</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/54964599/how-to-solve-listview-builder-bottom-overflow-issue" />
+        <published>2019-03-03T00:57:23Z</published>
+        <updated>2021-10-13T11:30:01Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#x27;m having the same issue that is outlined &lt;a href=&quot;https://stackoverflow.com/questions/54688080/listview-builder-bottom-overflow-by-pixel-in-flutter&quot;&gt;here&lt;/a&gt;. I&#x27;ve tried all of the solutions provided and I&#x27;m still getting an error &quot;RenderFlex overflowed by x pixels on the bottom&quot;. I don&#x27;t have any widgets underneath the &lt;a href=&quot;https://pub.dartlang.org/packages/flutter_pagewise&quot; rel=&quot;nofollow noreferrer&quot;&gt;custom&lt;/a&gt; ListView Builder. I&#x27;m really at a loss here. &lt;/p&gt;&#xA;&#xA;&lt;pre&gt;&lt;code&gt;Widget build(BuildContext context) {&#xA;return new Column(&#xA;  crossAxisAlignment: CrossAxisAlignment.start,&#xA;  mainAxisSize: MainAxisSize.min,&#xA;  children: &amp;lt;Widget&amp;gt;[&#xA;    new GradientAppBar(&quot;Twitter&quot;),&#xA;    new Container(&#xA;      child: Flexible(&#xA;        child: Column(&#xA;          children: &amp;lt;Widget&amp;gt;[&#xA;            Container(&#xA;              padding: const EdgeInsets.only(top: 10.0, left: 10.0),&#xA;              child: UserInfoHeader(userinfo)&#xA;            ),&#xA;            PagewiseListView(&#xA;              shrinkWrap: true,&#xA;              scrollDirection: Axis.vertical,&#xA;              physics: const AlwaysScrollableScrollPhysics(),&#xA;              pageSize: 200,&#xA;              itemBuilder: (context, TwitterCardContent entry, _) {&#xA;                return TwitterCard(entry);&#xA;              },&#xA;              pageFuture: (pageIndex) {&#xA;                return getStatuses(userinfo.screenName);&#xA;              },&#xA;            )&#xA;          ],&#xA;        ),&#xA;      ), &#xA;    ),&#xA;  ],&#xA;);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&#xA;&lt;p&gt;}&lt;/p&gt;&#xA;&#xA;&lt;p&gt;And here is the contents of each List item.&lt;/p&gt;&#xA;&#xA;&lt;pre&gt;&lt;code&gt;Widget build(BuildContext context) {&#xA;return new Card(&#xA;  //elevation: 8.0,&#xA;  margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),&#xA;  child: Container(&#xA;    decoration: new BoxDecoration(&#xA;      color: Colors.white,&#xA;      borderRadius: new BorderRadius.circular(25.0)&#xA;    ),&#xA;    child: ListTile(&#xA;      contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),&#xA;      leading: Container(&#xA;        padding: EdgeInsets.only(right: 12.0),&#xA;        decoration: new BoxDecoration(&#xA;          border: new Border(&#xA;            right: new BorderSide(width: 1.0, color: Colors.white54)&#xA;          )&#xA;        ),&#xA;        child: notchecked,&#xA;      ),&#xA;      title: Text(&#xA;        statusCard.timeStampString,&#xA;        style: Theme.TextStyles.buttonText,&#xA;      ),&#xA;      subtitle: Text(&#xA;        statusCard.text,&#xA;        style: Theme.TextStyles.contentCardText,&#xA;      ),&#xA;      trailing: delete,&#xA;    ),&#xA;  ),&#xA;);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&#xA;&lt;p&gt;}&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+</feed>
